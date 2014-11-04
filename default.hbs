@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/tomorrow-night-bright.css"}}" />
+
+    {{#if @blog.cover}}
+    <style>
+        @media (min-width:992px) { .cover {background-image: url({{@blog.cover}});} }
+    </style>
+    {{/if}}
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+    {{! Navbar }}
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="blog-logo-nav" href="{{@blog.url}}">
+                    {{#if @blog.logo}}
+                    <img class="img-circle" src="{{@blog.logo}}" alt="Blog Logo" />
+                    {{else}}
+                    {{@blog.title}}
+                    {{/if}}
+                </a>
+            </div>
+
+            {{! Collect the content for toggling }}
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{@blog.url}}">Home</a></li>
+                    <li><a href="{{@blog.url}}/about">About</a></li>
+                    <li><a href="{{@blog.url}}/contact">Contact</a></li>
+                    <li><a href="{{@blog.url}}/rss/">Subscribe</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {{! Everything else gets inserted here }}
+    <div id="body" class="container">
+        {{{body}}}
+
+        <footer class="site-footer clearfix">
+             <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+             <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+        {{! Ghost outputs important scripts and data with this tag }}
+        {{ghost_foot}}
+    </div>
+
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/highlight.pack.js"}}"></script>
+
+</body>
+</html>
