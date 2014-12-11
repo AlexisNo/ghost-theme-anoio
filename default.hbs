@@ -17,8 +17,9 @@
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap-theme.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/tomorrow-night-bright.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
 
     {{#if @blog.cover}}
     <style>
@@ -32,7 +33,7 @@
 <body class="{{body_class}}">
 
     {{! Navbar }}
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
         <div class="container">
             <div class="navbar-header">
@@ -55,8 +56,6 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="{{@blog.url}}">Home</a></li>
-                    <li><a href="{{@blog.url}}/about">About</a></li>
-                    <li><a href="{{@blog.url}}/contact">Contact</a></li>
                     <li><a href="{{@blog.url}}/rss/">Subscribe</a></li>
                 </ul>
             </div>
@@ -82,5 +81,6 @@
     <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/highlight.pack.js"}}"></script>
 
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

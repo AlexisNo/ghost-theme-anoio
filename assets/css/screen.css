@@ -14,7 +14,7 @@
 01. RESPONSIVE
 ********************/
 
-body { padding-top: 62px; background-color: #6b9430}
+body { padding-top: 62px; background: url('./009-subtle-light-patterns.jpg') /* background-color: #6b9430*/}
 
 #body {
     border-width: 0 1px;
@@ -75,7 +75,7 @@ body { padding-top: 62px; background-color: #6b9430}
         max-height: 242px;
     }
 }
-
+/*
 @media (min-width:1480px) {
     .container {
         width: 1440px;
@@ -105,11 +105,12 @@ body { padding-top: 62px; background-color: #6b9430}
         max-height: 300px;
     }
 }
-
+*/
 
 /********************
 02. FONT SIZES
 ********************/
+/*
 h1 { font-size: 42px; }
 h2 { font-size: 36px; }
 h3 { font-size: 30px; }
@@ -118,14 +119,14 @@ h5 { font-size: 22px; }
 h6 { font-size: 18px; }
 p { font-size: 16px; }
 .navbar .nav>li>a { font-size: 14px; }
-
+*/
 #blog-logo-nav img {
     display: block;
     max-height: 54px;
     width: auto;
     margin: 4px;
     line-height: 0;
-    border: 1px solid #6b9430;
+    border: 1px solid #347a00;
 }
 
 .blog-title {
