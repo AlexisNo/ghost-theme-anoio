@@ -14,10 +14,10 @@
 01. RESPONSIVE
 ********************/
 
-body { padding-top: 62px; background: url('./009-subtle-light-patterns.jpg') /* background-color: #6b9430*/}
+body { padding-top: 62px; background: url('./background.jpg') }
 
 #body {
-    border-width: 0 1px;
+    border-width: 0 1px 1px;
     border-color: #3e3f3a;
     border-style: solid;
     background-color: #FFF;
