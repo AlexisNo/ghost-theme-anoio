@@ -14,13 +14,14 @@
 01. RESPONSIVE
 ********************/
 
-body { padding-top: 62px; background: url('./background.jpg') }
+body { background: url('./background.jpg') }
 
 #body {
     border-width: 0 1px 1px;
     border-color: #3e3f3a;
     border-style: solid;
     background-color: #FFF;
+    margin-top: -20px;
 }
 
 @media (max-width:991px) {
@@ -34,6 +35,9 @@ body { padding-top: 62px; background: url('./background.jpg') }
     }
     #cover-content h2 {
         color: #98978b;
+    }
+    .post-image {
+        margin: 15px 0 0;
     }
 }
 
@@ -62,6 +66,9 @@ body { padding-top: 62px; background: url('./background.jpg') }
     #cover-content h2 {
         color: #DDD;
     }
+    .post-image {
+        margin: 34px;
+    }
 }
 
 @media (min-width:1200px) {
@@ -75,7 +82,7 @@ body { padding-top: 62px; background: url('./background.jpg') }
         max-height: 242px;
     }
 }
-/*
+
 @media (min-width:1480px) {
     .container {
         width: 1440px;
@@ -90,7 +97,7 @@ body { padding-top: 62px; background: url('./background.jpg') }
         max-height: 272px;
     }
 }
-
+/*
 @media (min-width:1760px) {
     .container {
         width: 1700px;
@@ -107,19 +114,6 @@ body { padding-top: 62px; background: url('./background.jpg') }
 }
 */
 
-/********************
-02. FONT SIZES
-********************/
-/*
-h1 { font-size: 42px; }
-h2 { font-size: 36px; }
-h3 { font-size: 30px; }
-h4 { font-size: 26px; }
-h5 { font-size: 22px; }
-h6 { font-size: 18px; }
-p { font-size: 16px; }
-.navbar .nav>li>a { font-size: 14px; }
-*/
 #blog-logo-nav img {
     display: block;
     max-height: 54px;
@@ -144,6 +138,19 @@ p { font-size: 16px; }
 }
 
 .post-title a {
+}
+
+.post-image {
+    width: 200px;
+    border: 1px solid #3e3f3a;
+}
+
+.post-summary ul {
+    padding-left: 20px;
+}
+
+.post-summary li {
+    /*list-style-type: none;*/
 }
 
 .post-excerpt p {
