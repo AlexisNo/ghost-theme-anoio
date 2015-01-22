@@ -225,6 +225,7 @@ body { background: url('./background.jpg') }
 
 /* PAGINATION */
 .pagination {
+    float: right;
 }
 
 .older-posts {
@@ -239,6 +240,7 @@ body { background: url('./background.jpg') }
 /* FOOTER */
 .site-footer {
 	margin-bottom: 4em;
+    clear: both;
 }
 
 .copyright {

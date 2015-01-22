@@ -44,7 +44,7 @@
                 </button>
                 <a id="blog-logo-nav" href="{{@blog.url}}">
                     {{#if @blog.logo}}
-                    <img class="img-circle" src="{{@blog.logo}}" alt="Blog Logo" />
+                    <img class="img-circle" src="{{@blog.logo}}" alt="Blog Logo"  title="Page d'accueil"/>
                     {{else}}
                     {{@blog.title}}
                     {{/if}}
@@ -53,9 +53,17 @@
 
             {{! Collect the content for toggling }}
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="{{@blog.url}}">Home</a></li>
-                    <li><a href="{{@blog.url}}/rss/">Subscribe</a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{@blog.url}}/rss/" target="_blank">RSS</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Social <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://github.com/AlexisNo" target="_blank">GitHub</a></li>
+                            <li><a href="https://hub.docker.com/u/alexisno/" target="_blank">Docker Hub</a></li>
+                            <li><a href="http://stackoverflow.com/users/1202697/alexis-n-o" target="_blank">Stack Overflow</a></li>
+                            <li><a href="https://www.linkedin.com/pub/alexis-h%C3%A9naut/21/242/397" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -66,8 +74,9 @@
         {{{body}}}
 
         <footer class="site-footer clearfix">
-             <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-             <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+            <hr />
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
         </footer>
 
         {{! Ghost outputs important scripts and data with this tag }}
